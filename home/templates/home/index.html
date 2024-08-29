@@ -1,70 +1,18 @@
-{% extends "base.html" %} {% load static %} {% block home %}
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-size: cover;
-        background-position: center;
-        color: black;
-    }
+{% extends "base.html" %} {% load static %}
+{% block home %}
 
-    header {
-        padding: 80px 0;
-        text-align: center;
-    }
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+<main class="px-3">
+<div class="cover-container d-flex h-100 p-3 flex-column text-center text-bg-dark">
+<h1>Cover your page.</h1>
+<p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+<p class="lead">
+  <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+</p>
 
-    h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-
-    main {
-        padding: 50px;
-    }
-
-    section {
-        margin-bottom: 50px;
-    }
-
-    footer {
-        background-color: #222;
-        padding: 20px 0;
-        text-align: center;
-        color: #fff;
-    }
-</style>
-<header>
-    <img
-    class="picture"
-    src="{% static 'images/background.jpeg' %}"
-    alt="Profile Picture"
-  />
-  <h1>Welcome to My Website</h1>
-  <p>A place to showcase my resume and projects</p>
-  <nav>
-    <ul>
-      <li><a href="resume.html">View Resume</a></li>
-      <li><a href="projects.html">View Projects</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an experienced web developer looking for new opportunities to
-      collaborate and advance.
-    </p>
-    <p>
-      Ever since I got acquainted with computers, I fell in love with coding and
-      have always been eager to learn new things.
-    </p>
-  </section>
+</div>
 </main>
 
-<footer>
-  <p>All rights reserved. 2024</p>
-</footer>
 {% endblock %}

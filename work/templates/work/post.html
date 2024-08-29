@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block work %}
+<div class="container my-projects">
+    <h1>My Projects</h1>
+    {% for Post in posts %}
+    <div class="card my-card">
+        <img src="{{ Post.image.url }}" class="card-img-top" alt="{{ Post.title }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ Post.title }}</h5>
+            <p class="card-text">{{ Post.content }}</p>
+            <p class="card-text">Link: <a href="{{ Post.link }}" target="_blank">{{ Post.link }}</a></p>
+            
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+    {% endblock %}
